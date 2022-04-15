@@ -1,5 +1,9 @@
 package com.jorgemartinez.duckhunt.ui
-
+/*
+git remote add origin https://github.com/DonFreecssWeb/DuckHunt.git
+git branch -M main
+git push -u origin main
+* */
 import android.content.Intent
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity

@@ -10,4 +10,5 @@
     android:layout_marginRight="16dp"
     app:layoutManager="LinearLayoutManager"
     tools:context=".ui.UserRankingFragment"
-    tools:listitem="@layout/fragment_user_ranking" />
+    tools:listitem="@layout/fragment_user_ranking"
+    />

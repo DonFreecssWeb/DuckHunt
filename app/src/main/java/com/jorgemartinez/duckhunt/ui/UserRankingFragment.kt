@@ -58,9 +58,12 @@ class UserRankingFragment : Fragment() {
                         for (document in it.result!!){
                             var userItem:User = document.toObject(User::class.java)
                              Log.e("ee",userItem.toString())
+                            Log.e("ee",userItem.nick)
                                 userList.add(userItem)
+
                         }
                         adapter2= MyUsersRecyclerViewAdapter(userList)
+                        adapter = adapter2
                 }
 
 

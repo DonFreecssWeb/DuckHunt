@@ -24,10 +24,6 @@ class RankingActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        //hace un include para jalar el id.nav.. desde otro layout que no le pertenece
-        val navController = findNavController(R.id.nav_host_fragment_content_ranking)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
@@ -35,16 +31,12 @@ class RankingActivity : AppCompatActivity() {
         }
 
         supportFragmentManager. beginTransaction()
-           .add(R.id.nav_host_fragment_content_ranking, UserRankingFragment())
+           .replace(R.id.nav_host_fragment_content_ranking, UserRankingFragment())
             .commit()
 
 
 
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_ranking)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
+
 }
